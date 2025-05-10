@@ -1,0 +1,33 @@
+{
+  "name": "cypress-bdd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "open": "npx cypress open",
+    "pet": "cypress run --spec cypress/e2e/features/api/CreatePet.feature",
+    "cypress:execution": "npx cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "cucumber-html-reporter": "^7.2.0",
+    "multiple-cucumber-html-reporter": "^3.9.2",
+    "cypress": "^14.3.3",
+    "cypress-real-events": "^1.14.0",
+    "cypress-xpath": "^2.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/step_definitions/",
+    "nonGlobalStepDefinitions": false,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": ".reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
