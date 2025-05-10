@@ -7,15 +7,15 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       on("file:preprocessor",
-      createBundler({
-        plugins: [createEsbuildPlugin.default(config)],
-      }));
+        createBundler({
+          plugins: [createEsbuildPlugin.default(config)],
+        }));
       preprocessor.addCucumberPreprocessorPlugin(on, config);
       return config;
     },
-	specPattern: "cypress/e2e/features/**/*.feature",
-  baseUrl: "https://petstore.swagger.io/v2",
-  chromeWebSecurity: false,
-  experimentalModifyObstructiveThirdPartyCode: true
+    specPattern: "cypress/e2e/features/**/*.feature",
+    baseUrl: "https://petstore.swagger.io/v2",
+    chromeWebSecurity: false,
+    experimentalModifyObstructiveThirdPartyCode: true
   },
 })

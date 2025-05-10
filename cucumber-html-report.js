@@ -1,7 +1,7 @@
-import { generate } from "multiple-cucumber-html-reporter";
-generate({
-    jsonDir: ".reports/cucumber-json",
-    reportPath: ".reports/cucumber-report.html",
+const report = require("multiple-cucumber-html-reporter");
+report.generate({
+    jsonDir: "cypress/cucumber-json",
+    reportPath: "./reports/cucumber-html-report.html",
     reportSuiteAsScenarios: true,
     scenarioTimestamp: true,
     // launchReport: true,
