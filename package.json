@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "open": "npx cypress open",
-    "pet": "cypress run --spec cypress/e2e/features/api/CreatePet.feature",
+    "api": "cypress run --spec cypress/e2e/features/api/*.feature",
+    "ui": "cypress run --spec cypress/e2e/features/ui/*.feature",
     "cypress:execution": "npx cypress run"
   },
   "keywords": [],
