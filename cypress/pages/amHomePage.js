@@ -28,6 +28,7 @@ class HomePage {
             .each(($li) => items.push($li.text()))
         return cy.wrap(items)
     }
+    
 }
 
 export const homePage = new HomePage();
